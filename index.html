@@ -131,12 +131,12 @@ import { injectNav, injectFooter } from "./js/nav.js";
   </h1>
   <p class="hero-sub">Browse 1000+ curated prompts for Midjourney, DALL·E 3, ChatGPT, Claude, Sora and more. Create stunning AI art and content instantly.</p>
   <div class="hero-actions">
-    <a href="./prompts.html" class="btn-primary">
+    <a href="prompts.html" class="btn-primary">
       <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0l-7-7m7 7l-7 7"/>
       </svg>Browse All Prompts
     </a>
-    <a href="./categories.html" class="btn-outline">
+    <a href="categories.html" class="btn-outline">
       <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
       </svg>View Categories
@@ -184,14 +184,14 @@ import { injectNav, injectFooter } from "./js/nav.js";
 <section class="section" aria-labelledby="cat-title">
   <div class="section-header">
     <h2 class="section-title" id="cat-title">Browse by <span>Category</span></h2>
-    <a href="./categories.html" class="see-all" aria-label="View all categories">View all →</a>
+    <a href="categories.html" class="see-all" aria-label="View all categories">View all →</a>
   </div>
   <div class="categories-grid" id="cat-grid" aria-label="Prompt categories">
     <!-- Loaded by JS -->
     <div class="cat-card" style="background:linear-gradient(135deg,#3730A3,#7C3AED);animation:sk-pulse 1.5s infinite"></div>
     <div class="cat-card" style="background:linear-gradient(135deg,#991b1b,#b45309);animation:sk-pulse 1.5s infinite;animation-delay:.1s"></div>
     <div class="cat-card" style="background:linear-gradient(135deg,#065f46,#0f766e);animation:sk-pulse 1.5s infinite;animation-delay:.2s"></div>
-    <div class="cat-card" style="background:linear-gradient(135deg,#1d4ed8,#0891b2);animation:sk-pulse 1.5s infinite;animation-delay:.3s"></div>
+    <div class="cat-card" style="background:linear-gradient(135deg,#1d4ed8,#0891b2);animation:sk-pulse 1.5s infinite;ancattion-delay:.3s"></div>
     <div class="cat-card" style="background:linear-gradient(135deg,#7c2d12,#b45309);animation:sk-pulse 1.5s infinite;animation-delay:.4s"></div>
     <div class="cat-card" style="background:linear-gradient(135deg,#4c1d95,#1e40af);animation:sk-pulse 1.5s infinite;animation-delay:.5s"></div>
   </div>
@@ -201,7 +201,7 @@ import { injectNav, injectFooter } from "./js/nav.js";
 <section class="section" aria-labelledby="trending-title">
   <div class="section-header">
     <h2 class="section-title" id="trending-title">🔥 <span>Trending</span> Prompts</h2>
-    <a href="./prompts.html?type=hot" class="see-all" aria-label="View all trending prompts">View all →</a>
+    <a href="prompts.html?type=hot" class="see-all" aria-label="View all trending prompts">View all →</a>
   </div>
   <div class="prompts-grid" id="trending-grid" aria-label="Trending prompts">
     <!-- skeleton -->
@@ -270,7 +270,7 @@ import { injectNav, injectFooter } from "./js/nav.js";
 <section class="section" aria-labelledby="fresh-title">
   <div class="section-header">
     <h2 class="section-title" id="fresh-title">🕐 <span>Latest</span> Prompts</h2>
-    <a href="./prompts.html" class="see-all" aria-label="Browse all prompts">Browse all →</a>
+    <a href="prompts.html" class="see-all" aria-label="Browse all prompts">Browse all →</a>
   </div>
   <div class="prompts-grid" id="fresh-grid" aria-label="Latest prompts">
     <div class="prompt-card skeleton-card"><div class="sk-img"></div><div class="card-body"><div class="sk-line sk-line-sm"></div><div class="sk-line sk-line-lg"></div><div class="sk-line sk-line-md"></div></div></div>
@@ -278,7 +278,7 @@ import { injectNav, injectFooter } from "./js/nav.js";
     <div class="prompt-card skeleton-card"><div class="sk-img"></div><div class="card-body"><div class="sk-line sk-line-sm"></div><div class="sk-line sk-line-lg"></div><div class="sk-line sk-line-md"></div></div></div>
     <div class="prompt-card skeleton-card"><div class="sk-img"></div><div class="card-body"><div class="sk-line sk-line-sm"></div><div class="sk-line sk-line-lg"></div><div class="sk-line sk-line-md"></div></div></div>
   </div>
-  <a href="./prompts.html" class="load-more-btn" style="display:flex;margin-top:28px;" aria-label="See all prompts">
+  <a href="prompts.html" class="load-more-btn" style="display:flex;margin-top:28px;" aria-label="See all prompts">
     See All Prompts →
   </a>
 </section>
@@ -322,7 +322,7 @@ import { injectNav, injectFooter } from "./js/nav.js";
 
 <script type="module">
 // Wire up promo link after config loads
-import { getAppConfig } from "./js/db.js";
+import { getAppConfig } from "db.js";
 getAppConfig().then(cfg => {
   const link = document.getElementById("promo-store-link");
   if (link && cfg.playStoreUrl) link.href = cfg.playStoreUrl;
